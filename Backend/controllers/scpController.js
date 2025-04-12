@@ -75,13 +75,12 @@ const verify = (req, res) => {
     console.log(token);
     
     if (!token) return res.status(401).send('No token');
-
     try {
         const decoded = jwt.verify(token, process.env.SECRET_KEY);
         console.log(decoded);
-        
 
-        res.status(200).json({ userId: decoded }); 
+        res.status(200).json({ userId: decoded });
+        
     } catch (err) {
         console.log(err);
         res.status(401).send('Invalid token');
