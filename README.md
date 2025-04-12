@@ -28,9 +28,3 @@ To set up the SCP Manager project, begin by cloning the repository and configuri
   npm install
   npm run dev
   ```
-
-Once both servers are running, the backend will be available on the port specified in the `.env` file (default: `3000`), and the frontend should be accessible at `http://localhost:5173` unless otherwise configured.
-
----
-
-Let me know if you want it formatted for a `README.md`, or need Docker or deployment instructions too!
