@@ -10,7 +10,7 @@ export const RequireAuth = ({ children }) => {
         const verifyAuth = async () => {
             try {
                 const response = await axios.get('https://scp-manager.onrender.com/scp/verify', {
-                    withCredentials: true, 
+                    withCredentials: true,
                 });
 
                 if (response.status === 200 && response.data?.userId) {
