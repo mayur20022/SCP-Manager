@@ -9,7 +9,7 @@ export const RequireAuth = ({ children }) => {
     useEffect(() => {
         const verifyAuth = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/scp/verify', {
+                const response = await axios.get('https://scp-manager.onrender.com/scp/verify', {
                     withCredentials: true, 
                 });
 
