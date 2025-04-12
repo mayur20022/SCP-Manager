@@ -9,12 +9,9 @@ const scpRoute = require('./router/scpRoute')
 const farmerRoute = require('./router/farmerRoute')
 
 db()
-const port = process.env.PORT || 4000
+const port = process.env.PORT || 3000
 
-app.use(cors({
-    origin: 'https://scp-manager-frontend.onrender.com',
-    credentials: true
-}));
+app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
