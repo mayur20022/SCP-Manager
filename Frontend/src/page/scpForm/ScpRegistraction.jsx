@@ -56,7 +56,7 @@ const ScpRegisterPage = () => {
                 withCredentials: true  
             });
 
-            navigate('/dashbord');
+            navigate('/dashboard');
         } catch (error) {
             console.error('Registration error:', error);
         }

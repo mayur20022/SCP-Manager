@@ -9,7 +9,7 @@ const scpRoute = require('./router/scpRoute')
 const farmerRoute = require('./router/farmerRoute')
 
 db()
-const port = process.env.PORT
+const port = process.env.PORT || 4000
 
 app.use(cors({
     origin: 'http://localhost:5173',
