@@ -67,7 +67,7 @@ const scpLogin = async (req, res) => {
 }
 
 const verify = (req, res) => {
-    const token = req.cookies.token || req.headers.authorization?.split(' ')[1];
+    const token = req.cookies.token || (authHeader && authHeader.startsWith('Bearer ') && authHeader.split(' ')[1]);
     
     if (!token) return res.status(401).send('No token');
 
