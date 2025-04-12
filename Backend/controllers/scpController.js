@@ -73,6 +73,8 @@ const verify = (req, res) => {
 
     try {
         const decoded = jwt.verify(token, process.env.SECRET_KEY);
+        console.log(decoded);
+        
 
         res.status(200).json({ userId: decoded }); 
     } catch (err) {
