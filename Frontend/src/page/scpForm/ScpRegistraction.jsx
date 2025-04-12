@@ -52,7 +52,7 @@ const ScpRegisterPage = () => {
         }
 
         try {
-            await axios.post('https://scp-manager.onrender.com/scp/register', formData, {
+            await axios.post('http://localhost:3000/scp/register', formData, {
                 withCredentials: true  
             });
 

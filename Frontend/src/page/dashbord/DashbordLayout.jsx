@@ -10,7 +10,7 @@ export default function DashbordLayout() {
     useEffect(() => {
         const fetchFarmers = async () => {
             try {
-                const response = await axios.get('https://scp-manager.onrender.com/farmer/farmers', {
+                const response = await axios.get('http://localhost:3000/farmer/farmers', {
                     withCredentials: true,
                 });                
                 setFarmers(response.data.farmers);

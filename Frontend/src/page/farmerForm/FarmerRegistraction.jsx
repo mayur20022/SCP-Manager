@@ -36,7 +36,7 @@ const FarmerRegistrationForm = () => {
         e.preventDefault();
         try {
             const response = await axios.post(
-                'https://scp-manager.onrender.com/farmer/register', formData, {
+                'http://localhost:3000/farmer/register', formData, {
                 withCredentials: true
             });
             console.log('Server response:', response.data);

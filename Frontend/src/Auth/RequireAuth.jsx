@@ -9,13 +9,11 @@ export const RequireAuth = ({ children }) => {
     useEffect(() => {
         const verifyAuth = async () => {
             try {
-                const response = await axios.get('https://scp-manager.onrender.com/scp/verify', {
-                    withCredentials: true,
+                const response = await axios.get('http://localhost:3000/scp/verify', {
+                    withCredentials: true, 
                 });
 
                 if (response.status === 200 && response.data?.userId) {
-                    console.log(response.status);
-                    
                     setIsAuthenticated(true);
                 } else {
                     setIsAuthenticated(false);

@@ -35,7 +35,7 @@ const ScpLogin = () => {
 
         try {
             const response = await axios.post(
-                'https://scp-manager.onrender.com/scp/login',
+                'http://localhost:3000/scp/login',
                 formData,
                 { withCredentials: true }
             );

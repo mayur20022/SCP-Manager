@@ -25,8 +25,6 @@ const scpRegister = async (req, res) => {
             { expiresIn: '24h' }
         );
         res.cookie("token", token)
-        console.log(token);
-        
 
         return res.status(201).json({
             message: 'SC Partner registered successfully',
@@ -60,8 +58,6 @@ const scpLogin = async (req, res) => {
             { expiresIn: '1h' }
         );
         res.cookie("token", token)
-        console.log(token);
-
         return res.status(200).json({ token: token });
 
     } catch (error) {
@@ -72,15 +68,13 @@ const scpLogin = async (req, res) => {
 
 const verify = (req, res) => {
     const token = req.cookies.token || req.headers.authorization?.split(' ')[1];
-    console.log(token);
     
     if (!token) return res.status(401).send('No token');
+
     try {
         const decoded = jwt.verify(token, process.env.SECRET_KEY);
-        console.log(decoded);
 
-        res.status(200).json({ userId: decoded });
-        
+        res.status(200).json({ userId: decoded }); 
     } catch (err) {
         console.log(err);
         res.status(401).send('Invalid token');
