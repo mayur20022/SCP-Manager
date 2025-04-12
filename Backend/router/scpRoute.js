@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const { scpRegister, scpLogin, verify } = require('../controllers/scpController')
-const  scpAuth  = require('../middleware/scpAuth')
-// router.get('/login', loginSCP)
+const scpAuth = require('../middleware/scpAuth')
+
 router.post('/register', scpRegister)
 
 router.post('/login', scpLogin)

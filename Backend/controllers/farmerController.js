@@ -1,6 +1,4 @@
-const bcrypt = require('bcrypt');
 const farmerModel = require('../models/farmerModel');
-const scpModel = require('../models/scpModel');
 
 const farmerRegister = async (req, res) => {
     try {

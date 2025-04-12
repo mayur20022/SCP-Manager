@@ -1,8 +1,6 @@
-// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Pages/Components
 import Header from './components/Header';
 import FarmerRegistrationForm from './page/farmerForm/FarmerRegistraction';
 import ScpRegisterPage from './page/scpForm/ScpRegistraction';

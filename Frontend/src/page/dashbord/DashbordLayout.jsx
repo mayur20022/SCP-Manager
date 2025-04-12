@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Sidebar from '../../components/Slider';
 
 export default function DashbordLayout() {
     const [farmers, setFarmers] = useState([]);
@@ -26,17 +27,13 @@ export default function DashbordLayout() {
     }, []);
 
     return (
-        <div className='max-w-[1200px] min-h-screen mx-auto py-10 p-7'>
+        <div className="flex w-full ">
+                <Sidebar/>
+                
+        <div className='w-full  min-h-screen ml-auto py-10 p-7'>
             <h1 className="text-3xl font-bold mb-5">Dashboard</h1>
 
-            <Link to={"/dashboard/farmer-register"}>
-                <button
-                    type="submit"
-                    className="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-                >
-                    Register New Farmer
-                </button>
-            </Link>
+           
 
             <div className="mt-10">
                 <h3 className="font-bold text-xl mb-4">Farmer List</h3>
@@ -81,6 +78,7 @@ export default function DashbordLayout() {
                         </table>
                     </div>
                 )}
+            </div>
             </div>
         </div>
     );

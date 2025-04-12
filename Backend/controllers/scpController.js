@@ -41,7 +41,7 @@ const scpRegister = async (req, res) => {
 const scpLogin = async (req, res) => {
     try {
         const scp = req.body;
-        // Input validation (essential)
+
         if (!scp.password || !scp.email) {
             return res.status(400).json({ error: 'Missing required fields' });
         }
@@ -53,7 +53,7 @@ const scpLogin = async (req, res) => {
         if (!isValidPassword) {
             return res.status(401).json({ error: 'Invalid Email or password' });
         }
-        // Generate JWT token
+
         const token = jwt.sign({ userId: user._id }, process.env.SECRET_KEY,
             { expiresIn: '1h' }
         );

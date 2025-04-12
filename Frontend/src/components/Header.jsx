@@ -13,7 +13,7 @@ export default function Header() {
     };
 
     return (
-        <div className="bg-green-700 text-white p-1">
+        <div className="bg-green-700 text-white p-1 py-4">
             <div className="max-w-[1300px] mx-auto flex items-center justify-between">
                 <div>
                     <h1 className="text-2xl font-bold">SCP </h1>

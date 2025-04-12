@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Sidebar from '../../components/Slider';
 
 const FarmerRegistrationForm = () => {
     const [formData, setFormData] = useState({
@@ -49,16 +50,10 @@ const FarmerRegistrationForm = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 py-8 px-4">
-            <div className="max-w-[1000px] mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-                <Link to={"/dashboard"}>
-                <button
-                    type="submit"
-                    className="px-4 py-2 m-5 bg-green-600 rounded-md text-white hover:bg-green-700 focus:ring-green-500"
-                >
-                    Go Back
-                    </button>
-                </Link>
+        <div className="flex w-full">
+            <Sidebar/>
+            <div className="w-full mx-auto rounded-lg shadow-md overflow-hidden mt-10">
+               
                 <div className="p-6 border-b">
                     <h2 className="text-xl font-semibold text-gray-800">Farmer Registration Form</h2>
                 </div>
