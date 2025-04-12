@@ -21,6 +21,9 @@ app.use(cookieParser())
 
 app.use('/scp', scpRoute)
 app.use('/farmer', farmerRoute)
+app.get("/", (req, res) => {
+    res.send("SCP Manager API")
+})
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
