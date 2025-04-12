@@ -14,6 +14,8 @@ export const RequireAuth = ({ children }) => {
                 });
 
                 if (response.status === 200 && response.data?.userId) {
+                    console.log(response.status);
+                    
                     setIsAuthenticated(true);
                 } else {
                     setIsAuthenticated(false);
