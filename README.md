@@ -1,12 +1,36 @@
-Steps for setup 
+To set up the SCP Manager project, begin by cloning the repository and configuring your environment. You’ll need to install dependencies for both the backend and frontend, and make sure your environment variables are properly set. Once configured, you can run the backend server and launch the frontend development environment.
 
-#git pull https://github.com/mayur20022/SCP-Manager.git main
+### 🔧 Setup Steps:
 
-#.env file ->
+- **Clone the repository**
+  ```bash
+  git clone https://github.com/mayur20022/SCP-Manager.git
+  cd SCP-Manager
+  ```
+
+- **Create a `.env` file** in the root of the project with the following contents:
+  ```
   PORT=3000
   MONGO_URL=mongodb+srv://scp-manager:RH2oB3GpaOVfWnAW@cluster0.yvbvw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
   SECRET_KEY=Assecement@123
+  ```
 
-#cd Backend -> npm i -> npx nodemon .\server.js 
+- **Backend setup:**
+  ```bash
+  cd Backend
+  npm install
+  npx nodemon server.js
+  ```
 
-#cd Frontend -> npm i -> npm run dev
+- **Frontend setup (in a new terminal window):**
+  ```bash
+  cd Frontend
+  npm install
+  npm run dev
+  ```
+
+Once both servers are running, the backend will be available on the port specified in the `.env` file (default: `3000`), and the frontend should be accessible at `http://localhost:5173` unless otherwise configured.
+
+---
+
+Let me know if you want it formatted for a `README.md`, or need Docker or deployment instructions too!
