@@ -55,7 +55,7 @@ const scpLogin = async (req, res) => {
         }
 
         const token = jwt.sign({ userId: user._id }, process.env.SECRET_KEY,
-            { expiresIn: '1h' }
+            { expiresIn: '24h' }
         );
         res.cookie("token", token)
         return res.status(200).json({ token: token });
